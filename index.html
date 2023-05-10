@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Katakana Visual</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+    <div class="page1">
+        <div class="header">
+            <h1>Katakana Visual</h1>
+            <div class="buttonDiv">
+                <button onclick="changeStyle()" id="button">To Text</button> 
+            </div>
+        </div>
+        <div class="div1" id ="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div2" id ="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div3" id ="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div4" id ="div4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div5" id ="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="symbol" id="bigSymbol" draggable="true" ondragstart="drag(event)"></div>
+        </div>
+        <div class="div6" id ="div6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div7" id ="div7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div8" id ="div8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div class="div9" id ="div9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+
+    <script src="main.js"></script>
+
+    </body>
+
+</html> 
