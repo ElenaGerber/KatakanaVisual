@@ -67,7 +67,7 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     var copyDiv = document.getElementById(data);
     fromCenter = document.getElementById("div5").contains(copyDiv)
-    copyDiv.style.fontSize="5vh";
+    copyDiv.style.fontSize="3vh";
     ev.target.appendChild(copyDiv); 
 
     if(fromCenter){
