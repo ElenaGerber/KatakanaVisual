@@ -3,7 +3,7 @@ const answerKatakana = ["A", "I", "U", "E", "O", "KA", "GA", "KI", "GI", "KU", "
 
 let randomNumber = 1
 let numba = 0
-let style = "Katakana"
+let style = "Text"
 let dataNumber = 0
 
 //Create a random list from Katakana and the Solutions
@@ -32,7 +32,12 @@ function newSymbol(){
     div.style.fontSize="11vh";
     div.style.textAlign="center";
     div.style.margin="2%";
-    div.innerText =  String.fromCharCode(randomUnicodeKatakana[numba]);
+    if(style == "Katakana"){
+     div.innerText =  String.fromCharCode(randomUnicodeKatakana[numba]);
+    }
+    else{
+      div.innerText = answerKatakana[Math.floor(Math.random()*answerKatakana.length)];
+    }
     div.setAttribute("draggable", "true");
     div.setAttribute("ondragstart","drag(event)");
     document.getElementById("div5").appendChild(div);
@@ -53,7 +58,9 @@ function drag(ev) {
 
 //Drop
 function drop(ev) {
-  if(ev.target!=document.getElementById("div5")){
+  var data = ev.dataTransfer.getData("text");
+  var copyDiv = document.getElementById(data);
+  if(ev.target!=document.getElementById("div5") && ev.target !== copyDiv){
     console.log
     ev.preventDefault();
     //drag&drop element
